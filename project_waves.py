@@ -1,3 +1,9 @@
+; Author: (Original code) by Prof. Steve Woolnough and Dr. Gui-Ying Yang
+;         (Modified code) by Dr. Sandro W. Lubis (Nov 2021)
+;         CCEW Filter via PCFs following Yang et al., (2003)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
 import numpy as np
 import pandas as pd
 import xarray as xr
