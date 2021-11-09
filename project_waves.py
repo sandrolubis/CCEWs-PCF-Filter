@@ -32,10 +32,10 @@ u.values = np.transpose(uT, (2, 0, 1))
 v.values = np.transpose(vT, (2, 0, 1))
 z.values = np.transpose(zT, (2, 0, 1))
 
-beta = 2.3e-11
+beta  = 2.3e-11
 radea = 6.371e+06
-spd = 86400.0
-ww = 2.0 * np.pi / spd
+spd   = 86400.0
+ww    = 2.0 * np.pi / spd
 
 latmax = 20.0
 
@@ -45,6 +45,7 @@ kmax = 20
 pmin = 3.0
 pmax = 30.0
 
+# convert trapping scale to metres
 y0 = 6.0
 y0real = 2.0 * np.pi * radea * y0 / 360.0
 
@@ -54,6 +55,8 @@ g_on_c = g / ce
 c_on_g = ce / g
 
 waves = np.array(['Kelvin', 'WMRG', 'R1', 'R2'])
+
+# transform u,z to q, r using q=z*(g/c) + u; r=z*(g/c) - u 
 
 q = z * g_on_c + u
 r = z * g_on_c - u
@@ -65,6 +68,8 @@ rf = np.fft.fft2(r, axes=(0, 2))
 nf = qf.shape[0]
 nlat = qf.shape[1]
 nk = qf.shape[2]
+
+# Find frequencies and wavenumbers corresponding to pmin,pmax and kmin,kmax in coeff matrices
 
 f = np.fft.fftfreq(nf)
 k = np.fft.fftfreq(nk) * nk
@@ -81,6 +86,8 @@ k1p = kmin
 k2p = kmax + 1
 k1n = nk - kmax
 k2n = nk - kmin + 1
+
+# Define the parobolic cylinder functions
 
 spi2 = np.sqrt(2.0 * np.pi)
 dsq = np.array([spi2, spi2, 2.0 * spi2, 6.0 * spi2])
@@ -100,6 +107,8 @@ qf_Kel = np.zeros((nf, nk), dtype='complex')
 qf_mode = np.zeros((dsq.size, nf, nk), dtype='complex')
 vf_mode = np.zeros((dsq.size, nf, nk), dtype='complex')
 rf_mode = np.zeros((dsq.size, nf, nk), dtype='complex')
+
+# reorder the spectral coefficents to make the latitudes the last dimension
 
 qf = np.transpose(qf, (0, 2, 1))
 vf = np.transpose(vf, (0, 2, 1))
