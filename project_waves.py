@@ -45,7 +45,7 @@ kmax = 20
 pmin = 3.0
 pmax = 30.0
 
-# convert trapping scale to metres
+# convert trapping scale to meters
 y0 = 6.0
 y0real = 2.0 * np.pi * radea * y0 / 360.0
 
