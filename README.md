@@ -1,5 +1,5 @@
 # CCEW-PCF-Filter
-2D spatial projection of CCEWs using parabolic cylinder functions (PCFs)
+2D spatial projection of CCEWs using parabolic cylinder functions (PCFs) following Yang et al., (2003)
 
 1. Data folder includes netcdf file of daily anomalies of zonal wind (u), meridional wind (v), and geopotential height (phi) at 850 hPa over 20<sup>o</sup>N-20<sup>o</sup>S for the period of 2016-2020.
 2. project_waves.py includes the codes to project the dynamical fields onto different types of equatorial waves.
