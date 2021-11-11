@@ -32,6 +32,7 @@ u.values = np.transpose(uT, (2, 0, 1))
 v.values = np.transpose(vT, (2, 0, 1))
 z.values = np.transpose(zT, (2, 0, 1))
 
+g     = 9.8
 beta  = 2.3e-11
 radea = 6.371e+06
 spd   = 86400.0
