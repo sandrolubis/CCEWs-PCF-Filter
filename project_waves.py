@@ -1,5 +1,5 @@
-; Authors: (Original code) by Prof. Steven Woolnough and Dr. Gui-Ying Yang
-;          (Modified code) by Dr. Sandro W. Lubis (Nov 2021)
+; Authors: Prof. Steven Woolnough and Dr. Gui-Ying Yang
+;          Modified by Dr. Sandro W. Lubis (Nov 2021)
 ;          CCEW Filter via PCFs following Yang et al., (2003)
 ; Contact: slubis.geomar@gmail.com
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
